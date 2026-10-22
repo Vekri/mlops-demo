@@ -1,6 +1,6 @@
 # MLOps demo: from `model.pkl` to a public page
 
-This project is the companion code for the YouTube lesson. One iris classifier is trained, saved as `model.pkl`, and then used by every later step: the command-line predictor, the FastAPI service, Docker, the Streamlit page, GitHub Actions, and Streamlit Community Cloud.
+One iris classifier is trained, saved as `model.pkl`, and then used by every later step: the command-line predictor, the FastAPI service, Docker, the Streamlit page, GitHub Actions, and Streamlit Community Cloud.
 
 | | |
 |---|---|
@@ -20,65 +20,6 @@ This project is the companion code for the YouTube lesson. One iris classifier i
 8. Keep versions with Git and share them on GitHub.
 9. Let GitHub Actions check every push.
 10. Publish the Streamlit page on Streamlit Community Cloud.
-
-## YouTube
-
-**Long lesson** — `youtube/mlops_youtube_long.mp4` — 6 minutes 18 seconds
-
-Title: MLOps End to End: Train model.pkl, Docker, GitHub Actions, and Streamlit Cloud
-
-Follow one iris classifier from your laptop to a public page. Every step uses the same saved `model.pkl`. Train it, track it in MLflow, call it from FastAPI, type the four measurements in Streamlit, package the API with Docker, watch the metrics, and let GitHub Actions check the push. Streamlit Cloud then serves the page from this repository.
-
-**Short** — `youtube/mlops_youtube_short.mp4` — 44 seconds
-
-Title: Train model.pkl, then publish it
-
-Train `model.pkl`, let GitHub Actions check the push, and let Streamlit Cloud publish the page. The API and the public page both load that same file.
-
-Paste the descriptions below into YouTube. Chapters and tags are also in `youtube/POSTING.txt`. The video files stay on your computer. This README and the code are what GitHub and Streamlit Cloud use.
-
-Long description:
-
-```text
-Follow one iris classifier from your laptop to a public page. Every step uses the same saved model.pkl.
-
-You will see the exact commands and what each one produces:
-- python train.py saves model.pkl
-- MLflow records the experiment
-- FastAPI serves POST /predict from model.pkl
-- Streamlit loads model.pkl and lets you type four measurements
-- Docker packages the API and model.pkl
-- Prometheus and Grafana read the metrics
-- Git stores each version and GitHub receives model.pkl with the push
-- GitHub Actions trains, tests, checks Streamlit, and checks Docker
-- Streamlit Cloud publishes the page and loads the same model.pkl
-
-Try the public app:
-https://mlops-demo-pu2vzxx8rafyqsavaglcbr.streamlit.app/
-
-Project code and README:
-https://github.com/Vekri/mlops-demo
-
-GitHub Actions:
-https://github.com/Vekri/mlops-demo/actions
-```
-
-Short description:
-
-```text
-Train model.pkl, let GitHub Actions check the push, and let Streamlit Cloud publish the page. The API and the public page both load that same file.
-
-Try the public app:
-https://mlops-demo-pu2vzxx8rafyqsavaglcbr.streamlit.app/
-
-Project code and README:
-https://github.com/Vekri/mlops-demo
-
-GitHub Actions:
-https://github.com/Vekri/mlops-demo/actions
-
-#Shorts #MLOps #Streamlit #Docker #GitHub
-```
 
 ## The four numbers
 
@@ -127,7 +68,7 @@ A later `git push` to `main` does two separate things: GitHub Actions checks tha
 | `.github/workflows/ci.yml` | The check that runs on every push to `main` |
 | `requirements.txt` | Python packages for the laptop, Actions, Docker, and Cloud |
 
-`model.pkl` is in the repository on purpose. Streamlit Cloud can only use files that were pushed. `mlflow.db`, screenshots, and the rendered videos stay on the laptop.
+`model.pkl` is in the repository on purpose. Streamlit Cloud can only use files that were pushed. `mlflow.db` and screenshots stay on the laptop.
 
 ## Run it on your laptop
 

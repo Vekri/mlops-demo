@@ -10,6 +10,5 @@ mlflow.db
 visuals/
 *.mp4
 *.mp3
-youtube/slides/
-youtube/audio/
-youtube/concat_list.txt
+make_youtube_lessons.py
+youtube/
