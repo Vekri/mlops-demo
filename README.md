@@ -92,3 +92,14 @@ Every push to `main` trains the model, stops if accuracy is below 0.90, runs the
 https://github.com/Vekri/mlops-demo/actions
 
 To send different measurements on a manual run, open **MLOps CI**, click **Run workflow**, and enter four comma-separated numbers such as `6.7,3.0,5.2,2.3`.
+
+## Deploy on Streamlit Community Cloud
+
+The app trains the iris model when `model.pkl` is not present, so Cloud can predict without that file.
+
+1. Open https://share.streamlit.io and sign in with GitHub.
+2. Choose **Create app**, then **Yup, I have an app**.
+3. Repository: `Vekri/mlops-demo`. Branch: `main`. Main file path: `streamlit_app.py`.
+4. Click **Deploy**.
+
+The public page will be a `https://....streamlit.app` address. A later push to `main` updates that page.
