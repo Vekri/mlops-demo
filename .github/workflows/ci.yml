@@ -46,7 +46,7 @@ jobs:
 
       - name: Check the Streamlit app starts
         run: |
-          python -m streamlit run streamlit_app.py --server.headless true --server.port 8501 --server.address 127.0.0.1 &
+          python -m streamlit run mlops_iris_predictor.py --server.headless true --server.port 8501 --server.address 127.0.0.1 &
           pid=$!
           ready=0
           for i in $(seq 1 30); do

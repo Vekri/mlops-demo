@@ -40,7 +40,7 @@ Use a different set of numbers on every run.
 ## 4. Open the Streamlit page
 
 ```powershell
-python -m streamlit run streamlit_app.py
+python -m streamlit run mlops_iris_predictor.py
 ```
 
 Open the local URL printed in the terminal, usually http://127.0.0.1:8501. Type four numbers such as `6.7, 3.0, 5.2, 2.3` and click **Use these numbers**, or edit each measurement box. The prediction updates from those inputs.
@@ -99,7 +99,7 @@ The app trains the iris model when `model.pkl` is not present, so Cloud can pred
 
 1. Open https://share.streamlit.io and sign in with GitHub.
 2. Choose **Create app**, then **Yup, I have an app**.
-3. Repository: `Vekri/mlops-demo`. Branch: `main`. Main file path: `streamlit_app.py`.
+3. Repository: `Vekri/mlops-demo`. Branch: `main`. Main file path: `mlops_iris_predictor.py`.
 4. Click **Deploy**.
 
 The public page will be a `https://....streamlit.app` address. A later push to `main` updates that page.

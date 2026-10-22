@@ -13,7 +13,7 @@ PRESETS = {
     "Virginica": (6.7, 3.0, 5.2, 2.3),
 }
 
-st.set_page_config(page_title="Iris predictor", page_icon="🌸", layout="centered")
+st.set_page_config(page_title="MLOps Iris Predictor", page_icon="🌸", layout="centered")
 
 
 def fit_model():
@@ -63,7 +63,7 @@ def apply_features(values):
     ) = values
 
 
-st.title("Iris flower predictor")
+st.title("MLOps Iris Predictor")
 st.write("Type the four measurements, or paste them as 6.7, 3.0, 5.2, 2.3. The prediction updates from those inputs.")
 
 model = load_model()
