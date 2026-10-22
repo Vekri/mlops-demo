@@ -1,0 +1,66 @@
+Long lesson
+Title: MLOps End to End: Train model.pkl, Docker, GitHub Actions, and Streamlit Cloud
+File: mlops_youtube_long.mp4
+Length: 06:18
+
+Description:
+Follow one iris classifier from your laptop to a public page. Every step uses the same saved model.pkl.
+
+You will see the exact commands and what each one produces:
+- python train.py saves model.pkl
+- MLflow records the experiment
+- FastAPI serves POST /predict from model.pkl
+- Streamlit loads model.pkl and lets you type four measurements
+- Docker packages the API and model.pkl
+- Prometheus and Grafana read the metrics
+- Git stores each version and GitHub receives model.pkl with the push
+- GitHub Actions trains, tests, checks Streamlit, and checks Docker
+- Streamlit Cloud publishes the page and loads the same model.pkl
+
+Try the public app:
+https://mlops-demo-pu2vzxx8rafyqsavaglcbr.streamlit.app/
+
+Project code and README:
+https://github.com/Vekri/mlops-demo
+
+GitHub Actions:
+https://github.com/Vekri/mlops-demo/actions
+
+Chapters:
+00:00 MLOps, from your laptop to a public page
+00:15 Python and scikit-learn write model.pkl
+00:40 MLflow records the experiment
+01:08 Change the four numbers any time
+01:35 FastAPI serves POST /predict
+02:00 Type the inputs on a web page
+02:26 The API runs inside one container
+02:54 Prometheus stores numbers, Grafana draws them
+03:21 Git on the laptop, GitHub for the shared copy
+03:52 GitHub Actions checks that exact commit
+04:23 A passing version becomes the public page
+04:47 Streamlit Cloud loads model.pkl from GitHub
+05:18 Docker and Streamlit Cloud use the same model.pkl
+05:46 Commands, GitHub, and the public page
+
+Tags:
+MLOps, Streamlit, Docker, GitHub Actions, FastAPI, MLflow, scikit-learn, model.pkl, CI CD, machine learning
+
+Short
+Title: Train model.pkl, then publish it
+File: mlops_youtube_short.mp4
+Format: vertical YouTube Short
+Length: 00:44
+
+Description:
+Train model.pkl, let GitHub Actions check the push, and let Streamlit Cloud publish the page. The API and the public page both load that same file.
+
+Try the public app:
+https://mlops-demo-pu2vzxx8rafyqsavaglcbr.streamlit.app/
+
+Project code and README:
+https://github.com/Vekri/mlops-demo
+
+GitHub Actions:
+https://github.com/Vekri/mlops-demo/actions
+
+#Shorts #MLOps #Streamlit #Docker #GitHub
