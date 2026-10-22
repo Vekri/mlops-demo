@@ -1,0 +1,12 @@
+.venv
+__pycache__
+.pytest_cache
+.git
+.github
+mlruns
+mlartifacts
+mlflow.db
+visuals
+*.mp4
+*.mp3
+*.md
