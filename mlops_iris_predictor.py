@@ -3,8 +3,6 @@ from pathlib import Path
 import joblib
 import pandas as pd
 import streamlit as st
-from sklearn.datasets import load_iris
-from sklearn.ensemble import RandomForestClassifier
 
 FLOWERS = {0: "Setosa", 1: "Versicolor", 2: "Virginica"}
 PRESETS = {
@@ -16,24 +14,12 @@ PRESETS = {
 st.set_page_config(page_title="MLOps Iris Predictor", page_icon="🌸", layout="centered")
 
 
-def fit_model():
-    data = load_iris()
-    model = RandomForestClassifier(n_estimators=100, random_state=42)
-    model.fit(data.data, data.target)
-    return model
-
-
 @st.cache_resource
 def load_model():
     path = Path(__file__).resolve().parent / "model.pkl"
-    if path.exists():
-        return joblib.load(path)
-    model = fit_model()
-    try:
-        joblib.dump(model, path)
-    except OSError:
-        pass
-    return model
+    if not path.exists():
+        return None
+    return joblib.load(path)
 
 
 def show_prediction(model, features):
@@ -67,6 +53,9 @@ st.title("MLOps Iris Predictor")
 st.write("Type the four measurements, or paste them as 6.7, 3.0, 5.2, 2.3. The prediction updates from those inputs.")
 
 model = load_model()
+if model is None:
+    st.error("model.pkl is missing. In this folder, run: python train.py")
+    st.stop()
 
 if "sepal_length" not in st.session_state:
     st.session_state.sepal_length = 5.1

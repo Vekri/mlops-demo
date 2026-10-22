@@ -95,7 +95,7 @@ To send different measurements on a manual run, open **MLOps CI**, click **Run w
 
 ## Deploy on Streamlit Community Cloud
 
-The app trains the iris model when `model.pkl` is not present, so Cloud can predict without that file.
+The Streamlit page loads the same `model.pkl` file created by `python train.py`. That file is in the repository, so Streamlit Cloud uses it too.
 
 1. Open https://share.streamlit.io and sign in with GitHub.
 2. Choose **Create app**, then **Yup, I have an app**.
